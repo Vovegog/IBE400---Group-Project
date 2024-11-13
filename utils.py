@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import itertools
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score, ConfusionMatrixDisplay, r2_score, mean_squared_error
+
+
 
 def histplot_maker(x):
     """
@@ -146,3 +149,8 @@ def plotCluster(data, kMeans):
         plt.legend(*scatter.legend_elements(), title="Clusters")
 
     plt.show()
+
+def r2MSETest(y_test, y_pred):
+    mse = mean_squared_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
+    print(f'Mean Squared Error: {mse} \nR-squared: {r2}')
