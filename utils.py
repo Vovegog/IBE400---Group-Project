@@ -151,6 +151,16 @@ def plotCluster(data, kMeans):
     plt.show()
 
 def r2MSETest(y_test, y_pred):
+    """
+    Calculate and print the Mean Squared Error (MSE) and R-squared (R2) score for the given test and predicted values.
+
+    Parameters:
+    y_test (array-like): True values of the target variable.
+    y_pred (array-like): Predicted values of the target variable.
+
+    Returns:
+    None
+    """
     mse = mean_squared_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
     print(f'Mean Squared Error: {mse} \nR-squared: {r2}')
