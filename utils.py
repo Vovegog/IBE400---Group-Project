@@ -143,7 +143,7 @@ def plotCluster(data, kMeans):
 
     for i, (x, y) in enumerate(itertools.combinations(data.columns, 2)):
         plt.subplot(n, 3, i + 1)
-        scatter = plt.scatter(data[x], data[y], c=kMeans.labels_, cmap='viridis')
+        scatter = plt.scatter(data[x], data[y], c=kMeans.labels_, cmap='tab10')
         plt.xlabel(x)
         plt.ylabel(y)
         plt.legend(*scatter.legend_elements(), title="Clusters")
